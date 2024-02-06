@@ -64,7 +64,7 @@ h1 {
 }
 
 .introduction p {
-  font-weight: 300;
+  font-weight: 400;
   line-height: 24px;
 }
 
@@ -80,10 +80,50 @@ h1 {
 }
 
 .preparation ul {
-  list-style-position: inside;
-  line-height: 30px;
+  line-height: 24px;
 }
 
-.preparation ul li span {
-  margin-left: 16px;
+.preparation ul li {
+  margin-left: 24px;
+  margin-top: 8px;
+}
+
+.preparation ul li div {
+  padding-left: 24px;
+}
+
+h2 {
+  color: var(--nutmeg);
+  font-size: 30px;
+  font-weight: 300;
+}
+
+.ingredients {
+  border-bottom: 1px solid var(--light-grey);
+}
+
+.ingredients ul {
+  margin-left: 24px;
+  margin-bottom: 32px;
+}
+
+.ingredients ul li {
+  margin-top: 12px;
+}
+
+.ingredients ul div {
+  padding-left: 16px;
+}
+
+.instructions ol {
+  list-style-type: none;
+  counter-reset: my-counter;
+}
+
+.instructions ol li::before {
+  content: counter(my-counter) '.';
+  counter-increment: my-counter;
+  color: var(--dark-raspberry); /* Cor do texto personalizada */
+  font-weight: bold;
+  font-size: 16px; /* Tamanho da fonte personalizado */
 }
