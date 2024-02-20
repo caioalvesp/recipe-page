@@ -96,6 +96,7 @@ h2 {
   color: var(--nutmeg);
   font-size: 30px;
   font-weight: 300;
+  margin: 24px 0;
 }
 
 .ingredients {
@@ -115,15 +116,56 @@ h2 {
   padding-left: 16px;
 }
 
+.instructions {
+  border-bottom: 1px solid var(--light-grey);
+}
+
 .instructions ol {
   list-style-type: none;
   counter-reset: my-counter;
+  padding-left: 0;
+  margin-bottom: 28px;
+}
+
+.instructions ol li {
+  counter-increment: my-counter;
+  display: flex;
+  align-items: baseline; /* Alinha o conteúdo à linha de base do marcador */
+  margin-bottom: 8px;
 }
 
 .instructions ol li::before {
   content: counter(my-counter) '.';
-  counter-increment: my-counter;
   color: var(--dark-raspberry); /* Cor do texto personalizada */
   font-weight: bold;
   font-size: 16px; /* Tamanho da fonte personalizado */
+}
+
+.instructions ol li div {
+  margin-left: 24px;
+  line-height: 24px;
+}
+
+.nutritional-values {
+  color: var(--nutmeg);
+  font-weight: 600;
+}
+
+.nutritional-table {
+  width: 100%;
+  margin-top: 12px;
+}
+
+.nutritional-table div {
+  display: grid;
+  grid-template-columns: 55% 45%;
+}
+
+.nutritional-table div {
+  border-bottom: 1px solid var(--light-grey);
+  padding: 16px 32px;
+}
+
+.nutritional-table div:last-of-type {
+  border-bottom: 0px;
 }
